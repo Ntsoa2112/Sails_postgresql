@@ -1,0 +1,11 @@
+<% for(var i = 0; i<clients.length; i++){ %>
+
+    <li>Nom : <%= clients[i].name %></li>
+    <li>Prénom : <%= clients[i].lastname %></li>
+    <li>Age : <%= clients[i].age %></li>
+    <a href="/edit_client/<%= clients[i].id %>">Editer</a>
+    <a href="/suppr_client/<%= clients[i].id %>">Supprimer</a>
+    <hr>
+<%
+}
+%>
