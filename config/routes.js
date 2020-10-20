@@ -31,6 +31,10 @@ module.exports.routes = {
 
   '/suppr_client/:id' : 'clientController.suppr',
 
+  '/chemin' : { view: 'pages/chemin' },
+
+  'post /chemin' : 'cheminController.traitement',
+
 
   /***************************************************************************
   *                                                                          *

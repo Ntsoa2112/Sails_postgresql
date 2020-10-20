@@ -8,6 +8,8 @@
     "@sailshq/connect-redis": "^3.2.1",
     "@sailshq/lodash": "^3.10.3",
     "@sailshq/socket.io-redis": "^5.2.0",
+    "file-system": "^2.2.2",
+    "get-folder-size": "^2.0.1",
     "grunt": "1.0.4",
     "sails": "^1.4.0",
     "sails-hook-grunt": "^4.0.0",
