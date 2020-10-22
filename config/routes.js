@@ -35,6 +35,8 @@ module.exports.routes = {
 
   'post /chemin' : 'cheminController.traitement',
 
+  '/exporter' : 'clientController.exporter',
+
 
   /***************************************************************************
   *                                                                          *

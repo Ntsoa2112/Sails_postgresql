@@ -1,4 +1,17 @@
-<% for(var i = 0; i<clients.length; i++){ %>
+<script type="text/javascript" src="/dependencies/sails.io.js"></script>
+<script type="text/javascript">
+    //Start the socket connection
+    io.sails.url = "http://localhost:1337/";
+
+    io.socket.on("new_user" , function(data){
+        var eto = document.getElementById("eto");
+        var item = document.createElement('li');
+        item.innerHTML = data.name;
+        eto.appendChild(item);
+    })
+</script>
+<% 
+for(var i = 0; i<clients.length; i++){ %>
 
     <li>Nom : <%= clients[i].name %></li>
     <li>Prénom : <%= clients[i].lastname %></li>
@@ -9,3 +22,7 @@
 <%
 }
 %>
+<div id="eto">
+
+</div>
+<button disabled="disabled"><a href="/exporter">Exporter</a> </button>
