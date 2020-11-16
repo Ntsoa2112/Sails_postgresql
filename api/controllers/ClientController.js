@@ -6,7 +6,7 @@
  */
 
 var xl = require('excel4node');
-const io = require('socket.io')
+const io = require('socket.io');
 
 module.exports = {
   create: function(req, res){
@@ -24,7 +24,10 @@ module.exports = {
       });
   },
 
-  affichage: function(req, res){
+  affichage: async function(req, res){
+    var NAMES_OF_PETS_SQL = `SELECT * from client`;
+    var rawResult = await sails.sendNativeQuery(NAMES_OF_PETS_SQL);
+
       Client.find(function(err, clients){
         if(err) return  res.send(err);
         res.view('pages/list_client', { clients : clients})

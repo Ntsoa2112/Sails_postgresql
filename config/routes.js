@@ -37,6 +37,10 @@ module.exports.routes = {
 
   '/exporter' : 'clientController.exporter',
 
+  '/chat' : 'chat.view',
+
+  'post /chat-room' : 'chat.chat_room',
+
 
   /***************************************************************************
   *                                                                          *

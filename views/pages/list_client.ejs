@@ -11,7 +11,8 @@
     })
 </script>
 <% 
-for(var i = 0; i<clients.length; i++){ %>
+for(var i = 0; i<clients.length; i++){ 
+    %>
 
     <li>Nom : <%= clients[i].name %></li>
     <li>Prénom : <%= clients[i].lastname %></li>
@@ -19,10 +20,9 @@ for(var i = 0; i<clients.length; i++){ %>
     <a href="/edit_client/<%= clients[i].id %>">Editer</a>
     <a href="/suppr_client/<%= clients[i].id %>">Supprimer</a>
     <hr>
-<%
+    <%
 }
 %>
 <div id="eto">
-
+    <a href="/chat">Chat</a>
 </div>
-<button disabled="disabled"><a href="/exporter">Exporter</a> </button>
